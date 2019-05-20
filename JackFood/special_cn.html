@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Kamloops jackfood</title>
+    <meta name="google-site-verification" content="C6yT1oBQ_u2xhUypqOSODpcTG88l8iilJ6XzKxeIREY" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta name=viewport content='width=700'>
+    <style>
+        div.gallery {
+            margin-top: 1cm;
+            margin-left: 1.5cm;
+            margin-bottom: 0.5cm;
+            border: 1px solid #ccc;
+            float: left;
+            width: 304px;
+            height: 300px;
+            background-color: coral;
+            position: relative;
+        }
+
+            div.gallery:hover {
+                border: 1px solid #777;
+                transform: scale(1.2);
+            }
+
+                div.gallery:hover .top-left {
+                    display: none;
+                }
+
+            div.gallery img {
+                width: 100%;
+                height: auto;
+            }
+
+        div.desc {
+            height: 60px;
+            padding: 15px;
+            text-align: center;
+            font-family: Andale Mono, monospace;
+            font-size: 17px;
+            color: aliceblue;
+        }
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #111;
+                }
+
+        a.likeimg:hover {
+            filter: grayscale(100%);
+            filter: drop-shadow(3px 3px 3px red);
+        }
+
+        .dropbtn {
+            background-image: url("button.jpg");
+            color: white;
+            right: 1px;
+            bottom: 12px;
+            font-size: 0px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            position: relative;
+            height: 23px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: relative;
+            right: 1px;
+            bottom: 12px;
+            background-color: #f9f9f9;
+            min-width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border: 2px solid orange;
+            border-radius: 5px;
+        }
+
+            .dropdown-content a {
+                background-color: antiquewhite;
+                color: dodgerblue;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: mediumturquoise
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        .postbtn {
+            border-radius: 4px;
+            background-color: lightGreen;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            height: 40px;
+            width: 120px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+            .postbtn span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+                .postbtn span:after {
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+
+            .postbtn:hover span {
+                padding-right: 25px;
+            }
+
+                .postbtn:hover span:after {
+                    opacity: 1;
+                    right: 0;
+                }
+
+        .share {
+            margin-right: 4cm;
+            position: relative;
+            width: 100%;
+        }
+
+        .share_text {
+            position: relative;
+            display: inline;
+            font-family: serif;
+            color: #00ff80;
+            position: relative;
+            width: 100%;
+        }
+
+        a.share:hover {
+            text-decoration: none;
+        }
+
+        a.title:hover, a.title:active {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+
+
+<body style="background-image: url('side_background.jpg');background-size: 100%; background-repeat: no-repeat;
+  background-size: cover; min-width:17cm;">
+
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8" style="background-image: url('main_background.jpg');background-size: cover;position:center;background-position: center;
+    background-repeat: no-repeat; ">
+            <div class="row">
+                <div style="background-color:#333;position:relative;height:0.5cm;width:100%;">
+                    <a href="special.html"><button style="float:right; margin-right:23px; margin-top:1px;height:17px;background-color:grey;font-size:13px;text-align:center;" type="button" class="postbtn"><span>English</span></button></a>
+                </div>
+                <div style="background-image: url('contact_background.png');padding:10px;width:100%;position:relative;">
+                    <h1 style="font-style:italic; font-family: Trebuchet MS; font-size:50px;font-weight: bold;">
+                        <a style="color:#009999;" class="title" href="index_cn.html">
+                            Kamloops JackFood
+                        </a>
+                    </h1>
+                </div>
+                <ul>
+                    <li><a class="active" href="index_cn.html">主页</a></li>
+                    <li><a href="special_cn.html">站长推荐</a></li>
+                    <li><a href="about_cn.html">关于网站</a></li>
+                    <a href="comment.html"><button style="float:right; margin-right:23px; margin-top:7px;" type="button" class="postbtn"><span>讨论栏</span></button></a>
+                </ul>
+                <ul class="nav nav-tabs" style="background-color:orange;">
+                    <li class="active"><a data-toggle="tab" href="#Rice">米饭炒菜</a></li>
+                    <li><a data-toggle="tab" href="#Noodles">面食</a></li>
+                    <li><a data-toggle="tab" href="#Burger">快餐</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="Rice" class="tab-pane fade in active">
+                        <div class="row">
+                            <div class="col-sm-12" style="padding-left:1cm;padding-right:1cm;padding-bottom:2cm;">
+
+                                <div class="gallery">
+                                    <a href="ricebowl_cn.html"><img src="tuijian/yangzhouchaofan.jpg" style="position:relative;height:100%;width:100%;"></a>
+                                    <div class="top-left" style="background-image:url('tuijian/text_background.jpg');border-radius: 20%;position:absolute; bottom:8px;left:16px;"><h3 style="color:darkgreen;padding-left:5px;padding-right:5px">扬州炒饭</h3></div>
+                                </div>
+
+                                <div class="gallery">
+                                    <a href="yuxiangyuan_cn.html"><img src="tuijian/muerchaorou.jpg" style="position:relative;height:100%;width:100%;"></a>
+                                    <div class="top-left" style="background-image:url('tuijian/text_background.jpg');border-radius: 20%;position:absolute; bottom:8px;left:16px;"><h3 style="color:darkgreen;padding-left:5px;padding-right:5px">木耳炒肉</h3></div>
+                                </div>
+
+                                <div class="gallery">
+                                    <a href="ricebowl_cn.html"><img src="tuijian/malaxiangguo.jpg" style="position:relative;height:100%;width:100%;"></a>
+                                    <div class="top-left" style="background-image:url('tuijian/text_background.jpg');border-radius: 20%;position:absolute; bottom:8px;left:16px;"><h3 style="color:darkgreen;padding-left:5px;padding-right:5px">麻辣香锅</h3></div>
+                                </div>
+
+                                <div class="gallery">
+                                    <a href="shanghaichuancaiguan_cn.html"><img src="tuijian/koushuiji.jpg" style="position:relative;height:100%;width:100%;"></a>
+                                    <div class="top-left" style="background-image:url('tuijian/text_background.jpg');border-radius: 20%;position:absolute; bottom:8px;left:16px;"><h3 style="color:darkgreen;padding-left:5px;padding-right:5px">口水鸡</h3></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="Noodles" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-sm-12" style="padding-left:1cm;padding-right:1cm;padding-bottom:2cm;">
+                                <div class="gallery">
+                                    <a href="ricebowl_cn.html"><img src="tuijian/zhajiangmian.jpg" style="position:relative;height:100%;width:100%;"></a>
+                                    <div class="top-left" style="background-image:url('tuijian/text_background.jpg');border-radius: 20%;position:absolute; bottom:8px;left:16px;"><h3 style="color:darkgreen;padding-left:5px;padding-right:5px">炸酱面</h3></div>
+                                </div>
+
+                                <div class="gallery">
+                                    <a href="ricebowl_cn.html"><img src="tuijian/jisiliangmian.jpg" style="position:relative;height:100%;width:100%;"></a>
+                                    <div class="top-left" style="background-image:url('tuijian/text_background.jpg');border-radius: 20%;position:absolute; bottom:8px;left:16px;"><h3 style="color:darkgreen;padding-left:5px;padding-right:5px">鸡丝凉皮</h3></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Burger" class="tab-pane fade">
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+                <div style="background-image: url('title.jpg');padding:10px;width:100%;position:relative; text-align:center;">
+                    <h1 style="color: #808080;">
+                        与您的朋友共享
+                    </h1>
+                    <div class="row">
+                        <div class="col-sm-3" style="padding:10px;">
+                            <!-- Facebook -->
+                            <a class="share" href="http://www.facebook.com/sharer.php?u=http://www.jackfood.ca" target="_blank">
+                                <img style="padding-bottom:10px;" src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+
+                                <div><h1 class="share_text">Facebook</h1></div>
+                            </a>
+                        </div>
+                        <div class="col-sm-3" style="padding:10px;">
+                            <!-- Google+ -->
+                            <a class="share" href="https://plus.google.com/share?url=http://www.jackfood.ca" target="_blank">
+                                <img style="padding-bottom:10px;" src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+
+                                <div><h1 class="share_text">Google</h1></div>
+                            </a>
+                        </div>
+                        <div class="col-sm-3" style="padding:10px;">
+                            <!-- LinkedIn -->
+                            <a class="share" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.jackfood.ca" target="_blank">
+                                <img style="padding-bottom:10px;" src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+
+                                <div><h1 class="share_text">LinkedIn</h1></div>
+                            </a>
+                        </div>
+                        <div class="col-sm-3" style="padding:10px;">
+                            <!-- Twitter -->
+                            <a class="share" href="https://twitter.com/share?url=http://www.jackfood.ca;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                                <img style="padding-bottom:10px;" src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+
+                                <div><h1 class="share_text">Twitter</h1></div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="background-image: url('footer.jpg');padding:50px;width:100%;position:relative; text-align:left;">
+                    <footer style="font-family:Arial Narrow; color:white; font-size:10px;">
+                        <p>Copyright © 2017 - 2018 JackT</p>
+                        <p>
+                            Contact information: <a style="color:#88cc00;" href="mailto:ljack784@gmail.com">
+                                ljack784@gmail.com
+                            </a>.
+                        </p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="row">
+                <!-- weather widget start --><div style="position:fixed;margin-top:2cm;" id="m-booked-bl-simple-week-vertical-21446">
+                    <div class="booked-wzs-160-275 weather-customize" style="background-color:#5f74b3; width:160px;" id="width1 "> <a target="_blank" class="booked-wzs-top-160-275" href="http://www.booked.net/"><img src="//s.bookcdn.com/images/letter/s5.gif" alt="Booked net" /></a> <div class="booked-wzs-160-275_in"> <div class="booked-wzs-160-275-data"> <div class="booked-wzs-160-275-left-img wrz-18"></div> <div class="booked-wzs-160-275-right"> <div class="booked-wzs-day-deck"> <div class="booked-wzs-day-val"> <div class="booked-wzs-day-number"><span class="plus">+</span>13</div> <div class="booked-wzs-day-dergee"> <div class="booked-wzs-day-dergee-val">&deg;</div> <div class="booked-wzs-day-dergee-name">C</div> </div> </div> <div class="booked-wzs-day"> <div class="booked-wzs-day-d"><span class="plus">+</span>13&deg;</div> <div class="booked-wzs-day-n"><span class="plus">+</span>7&deg;</div> </div> </div> <div class="booked-wzs-160-275-info"> <div class="booked-wzs-160-275-city">Kamloops</div> <div class="booked-wzs-160-275-date">Thursday, 19</div> </div> </div> </div> <a target="_blank" href="http://ibooked.ca/weather/kamloops-30510" class="booked-wzs-bottom-160-275"> <table cellpadding="0" cellspacing="0" class="booked-wzs-table-160"> <tr> <td class="week-day"> <span class="week-day-txt">Friday</span></td> <td class="week-day-ico"><div class="wrz-sml wrzs-01"></div></td> <td class="week-day-val"><span class="plus">+</span>7&deg;</td> <td class="week-day-val">0&deg;</td> </tr> <tr> <td class="week-day"> <span class="week-day-txt">Saturday</span></td> <td class="week-day-ico"><div class="wrz-sml wrzs-22"></div></td> <td class="week-day-val"><span class="plus">+</span>5&deg;</td> <td class="week-day-val"><span class="plus">+</span>1&deg;</td> </tr> <tr> <td class="week-day"> <span class="week-day-txt">Sunday</span></td> <td class="week-day-ico"><div class="wrz-sml wrzs-18"></div></td> <td class="week-day-val"><span class="plus">+</span>9&deg;</td> <td class="week-day-val"><span class="plus">+</span>3&deg;</td> </tr> <tr> <td class="week-day"> <span class="week-day-txt">Monday</span></td> <td class="week-day-ico"><div class="wrz-sml wrzs-18"></div></td> <td class="week-day-val"><span class="plus">+</span>8&deg;</td> <td class="week-day-val">0&deg;</td> </tr> <tr> <td class="week-day"> <span class="week-day-txt">Tuesday</span></td> <td class="week-day-ico"><div class="wrz-sml wrzs-01"></div></td> <td class="week-day-val"><span class="plus">+</span>8&deg;</td> <td class="week-day-val">-2&deg;</td> </tr> <tr> <td class="week-day"> <span class="week-day-txt">Wednesday</span></td> <td class="week-day-ico"><div class="wrz-sml wrzs-01"></div></td> <td class="week-day-val"><span class="plus">+</span>9&deg;</td> <td class="week-day-val">-3&deg;</td> </tr> </table> <div class="booked-wzs-center"> <span class="booked-wzs-bottom-l">See 7-Day Forecast</span> </div> </a> </div> </div>
+                    <script type="text/javascript"> var css_file = document.createElement("link"); css_file.setAttribute("rel", "stylesheet"); css_file.setAttribute("type", "text/css"); css_file.setAttribute("href", 'https://s.bookcdn.com/css/w/booked-wzs-widget-160x275.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData(data) { if (typeof (data) != 'undefined' && data.results.length > 0) { for (var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-bl-simple-week-vertical-21446'); if (objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-' + data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if (copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } } </script>
+                    <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/weather/info?action=get_weather_info&ver=6&cityID=30510&type=4&scode=124&ltid=3457&domid=569&anc_id=60922&cmetric=1&wlangID=1&color=5f74b3&wwidth=160&header_color=ffffff&text_color=333333&link_color=08488D&border_form=1&footer_color=ffffff&footer_text_color=333333&transparent=0"></script><!-- weather widget end -->
+                </div>
+            </div>
+            <div class="row" style="margin-top:8.5cm; position:fixed;">
+                <a href="#"><div id="hide">Xclose</div></a>
+            </div>
+            <div class="row" style="margin-top:11cm; position:fixed;">
+                <div class="news" style="transform: translateX(-8px); ;background-image:url('news.jpg'); background-size: cover; height:0.7cm; width:4.6cm; text-align:center;">
+                    <h4 style="position:relative; top:0.1cm;color:#A1318A; font-family:Georgia, serif;">Breaking News</h4>
+                </div>
+                <div class="list-group" style="width:4.2cm;">
+                    <p class="list-group-item list-group-item-success">RiceBowl-Golden Wings on sale 2.99$</p>
+                    <p class="list-group-item list-group-item-info">Second item</p>
+                    <p class="list-group-item list-group-item-warning">Third item</p>
+                    <p class="list-group-item list-group-item-danger">Fourth item</p>
+                    <p class="list-group-item list-group-item-success"><a href="add_news.html" style="font-style: italic;color:coral">Send me an email to post any sales</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex, "mySlides");
+        showDivs(slideIndex, "mySlides2");
+        showDivs(slideIndex, "mySlides3");
+        showDivs(slideIndex, "mySlides4");
+        showDivs(slideIndex, "mySlides5");
+
+        function plusDivs(n, slide) {
+            showDivs(slideIndex += n, slide);
+        }
+
+        function showDivs(n, slide) {
+            var i;
+            var x = document.getElementsByClassName(slide);
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+        function showbutton(pic) {
+            var x = document.getElementById(pic);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+        }
+
+        function hidebutton(pic) {
+            var x = document.getElementById(pic);
+            if (x.style.display === "block")
+                x.style.display = "none";
+        }
+
+        var startingNumber = 0;
+
+        function AddValue() {
+            startingNumber++;
+            document.getElementById("like").innerHTML = startingNumber;
+        }
+
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("#m-booked-bl-simple-week-vertical-21446").hide();
+                $("#hide").hide();
+            });
+        });
+    </script>
+
+</body>
+</html>

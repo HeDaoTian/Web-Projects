@@ -1,0 +1,411 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Kamloops jackfood</title>
+    <meta name="google-site-verification" content="C6yT1oBQ_u2xhUypqOSODpcTG88l8iilJ6XzKxeIREY" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta name=viewport content='width=700'>
+    <style>
+        div.gallery {
+            margin-top: 1cm;
+            margin-left: 1.5cm;
+            margin-right: 0.25cm;
+            margin-bottom: 0.5cm;
+            border: 1px solid #ccc;
+            float: left;
+            width: 304px;
+            height: 300px;
+            background-color: coral;
+            position: relative;
+        }
+
+            div.gallery:hover {
+                border: 1px solid #777;
+            }
+
+            div.gallery img {
+                width: 100%;
+                height: auto;
+            }
+
+        div.desc {
+            height: 60px;
+            padding: 15px;
+            text-align: center;
+            font-family: Andale Mono, monospace;
+            font-size: 17px;
+            color: aliceblue;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #111;
+                }
+
+        a.likeimg:hover {
+            filter: grayscale(100%);
+            filter: drop-shadow(3px 3px 3px red);
+        }
+
+        .dropbtn {
+            background-image: url("button.jpg");
+            color: white;
+            right: 1px;
+            bottom: 12px;
+            font-size: 0px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            position: relative;
+            height: 23px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: relative;
+            right: 1px;
+            bottom: 12px;
+            background-color: #f9f9f9;
+            min-width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border: 2px solid orange;
+            border-radius: 5px;
+        }
+
+            .dropdown-content a {
+                background-color: antiquewhite;
+                color: dodgerblue;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: mediumturquoise
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        .postbtn {
+            border-radius: 4px;
+            background-color: lightGreen;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            height: 40px;
+            width: 120px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+            .postbtn span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+                .postbtn span:after {
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+
+            .postbtn:hover span {
+                padding-right: 25px;
+            }
+
+                .postbtn:hover span:after {
+                    opacity: 1;
+                    right: 0;
+                }
+
+        .share {
+            margin-right: 4cm;
+            position: relative;
+            width: 100%;
+        }
+
+        .share_text {
+            position: relative;
+            display: inline;
+            font-family: serif;
+            color: #00ff80;
+            position: relative;
+            width: 100%;
+        }
+
+        a.share:hover {
+            text-decoration: none;
+        }
+
+        a.title:hover, a.title:active {
+            text-decoration: none;
+        }
+
+        .hover09 img {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+            border-radius: 50%;
+        }
+
+            .hover09 img:hover {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+
+        .mySlides w3-animate-bottom {
+            display: none
+        }
+
+        .w3-left, .w3-right, .w3-badge {
+            cursor: pointer
+        }
+
+        .w3-badge {
+            height: 13px;
+            width: 13px;
+            padding: 0;
+        }
+    </style>
+</head>
+
+
+
+<body style="background-image: url('side_background.jpg');background-size: 100%; background-repeat: no-repeat;
+  background-size: cover; min-width:17cm;">
+
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8" style="background-image: url('main_background.jpg');background-size: cover;position:relative;background-position: center;
+    background-repeat: no-repeat; ">
+            <div class="row">
+                <div style="background-color:#333;position:relative;height:0.5cm;">
+                    <a href="junfa.html"><button style="float:right; margin-right:23px; margin-top:1px;height:17px;background-color:grey;font-size:13px;text-align:center;" type="button" class="postbtn"><span>English</span></button></a>
+                </div>
+                <div style="background-image: url('contact_background.png');padding:10px;width:100%;position:relative;">
+                    <h1 style="font-style:italic; font-family: Trebuchet MS; font-size:50px;font-weight: bold;">
+                        <a style="color:#009999;" class="title" href="index_cn.html">
+                            Kamloops JackFood
+                        </a>
+                    </h1>
+                </div>
+                <ul>
+                    <li><a class="active" href="index_cn.html">主页</a></li>
+                    <li><a href="special_cn.html">站长推荐</a></li>
+                    <li><a href="about_cn.html">关于网站</a></li>
+                    <a href="comment.html"><button style="float:right; margin-right:23px; margin-top:7px;" type="button" class="postbtn"><span>讨论栏</span></button></a>
+                </ul>
+
+                <div style="text-align:center;"><H1 style="font-family:fantasy;color:burlywood;padding-top:1cm;">均发菜馆</H1></div>
+                <div name="menu" class="w3-content w3-display-container" style="width:100%; padding:1cm;">
+                    <img class="mySlides w3-animate-bottom" src="junfa_menu.jpg" style="width:100%" onclick="window.open(this.src); return false;">
+                    <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="position:relative;width:100%;">
+                        <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                        <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                    </div>
+                </div>
+                <div style="text-align:center;color:chocolate;padding:1cm;background:url('contact_background.png')">
+                    <a name="vote" href="tel:[250314-1968]" style="text-decoration: none;">
+                        <img src="call.jpg" style="border-radius: 50%;width:100px;">
+                        <h2>(250)314-1968</h2>
+                    </a>
+                    <!-- start Star Ratings and Reviews --><div style="padding-top:1cm;text-align:right">
+                        <h2 style="color:cornflowerblue">热度</h2>
+                        <script data-sil-id='59fa9ff51127f600154609b1'> (function () { var d = document, w = window, l = window.location, p = l.protocol == 'file:' ? 'http://' : '//'; if (!w.WS) w.WS = {}; c = w.WS; var m = function (t, o) { var e = d.getElementsByTagName('script'); e = e[e.length - 1]; var n = d.createElement(t); if (t == 'script') { n.async = true; } for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e) }; m('script', { src: p + 'bawkbox.com/widget/star-rating/59fa9ff51127f600154609b1?page=' + encodeURIComponent(l + ''), type: 'text/javascript' }); c.load_net = m; })();</script>
+                        <script type='application/ld+json' src='//bawkbox.com/widget/star-rating/59fa9ff51127f600154609b1/microdata'>
+                        </script><div class='sil-widget-star-rating sil-widget' id='sil-widget-59fa9ff51127f600154609b1'><a href='https://bawkbox.com/install/star-rating'>Star Ratings and Reviews</a></div>
+                        <!-- end Star Ratings and Reviews -->
+                    </div>
+
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.993938709897!2d-120.353983483694!3d50.664373079807696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537e2c5cebb25c29%3A0x94c8e1ba336c296f!2sHouse+of+Kwan!5e0!3m2!1sen!2sca!4v1509597156449" width="100%" height="600" frameborder="0" style="border:0;padding:1cm;" allowfullscreen></iframe>                    <h2 style="padding-bottom:1cm;">1250 Trans Canada Hwy W, Kamloops, BC V2C 6R3</h2>
+
+                    <p>星期一</p>
+                    <p>11:30-22:00</p>
+
+                    <p>星期二</p>
+                    <p>11:30-22:00</p>
+
+                    <p>星期三</p>
+                    <p>11:30-22:00</p>
+
+                    <p>星期四</p>
+                    <p>11:30-22:00</p>
+
+                    <p>星期五</p>
+                    <p>11:30-22:00</p>
+
+                    <p>星期六</p>
+                    <p>12:00-22:00</p>
+
+                    <p>星期日</p>
+                    <p>closed</p>
+
+                </div>
+
+                <div style="background-image: url('title.jpg');padding:10px;width:100%;position:relative; text-align:center;">
+                    <h1 style="color: #808080;padding:25px;">
+                        与您的朋友共享
+                    </h1>
+                    <div class="row">
+                        <div class="col-sm-3" style="padding:10px;">
+                            <!-- Facebook -->
+                            <a class="share" href="http://www.facebook.com/sharer.php?u=http://www.jackfood.ca" target="_blank">
+                                <img style="padding-bottom:10px;" src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+
+                                <div><h1 class="share_text">Facebook</h1></div>
+                            </a>
+                        </div>
+                        <div class="col-sm-3" style="padding:10px;">
+                            <!-- Google+ -->
+                            <a class="share" href="https://plus.google.com/share?url=http://www.jackfood.ca" target="_blank">
+                                <img style="padding-bottom:10px;" src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+
+                                <div><h1 class="share_text">Google</h1></div>
+                            </a>
+                        </div>
+                        <div class="col-sm-3" style="padding:10px;">
+                            <!-- LinkedIn -->
+                            <a class="share" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.jackfood.ca" target="_blank">
+                                <img style="padding-bottom:10px;" src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+
+                                <div><h1 class="share_text">LinkedIn</h1></div>
+                            </a>
+                        </div>
+                        <div class="col-sm-3" style="padding:10px;">
+                            <!-- Twitter -->
+                            <a class="share" href="https://twitter.com/share?url=http://www.jackfood.ca;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+                                <img style="padding-bottom:10px;" src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+
+                                <div><h1 class="share_text">Twitter</h1></div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="background-image: url('footer.jpg');padding:50px;width:100%;position:relative; text-align:left;">
+                    <footer style="font-family:Arial Narrow; color:white; font-size:10px;">
+                        <p>Copyright © 2017 - 2018 JackT</p>
+                        <p>
+                            Contact information: <a style="color:#88cc00;" href="mailto:ljack784@gmail.com">
+                                ljack784@gmail.com
+                            </a>.
+                        </p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("#m-booked-bl-simple-week-vertical-21446").hide();
+                $("#hide").hide();
+            });
+        });
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-white";
+        }
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 10000); // Change image every 10 seconds
+        }
+
+
+    </script>
+
+
+</body>
+</html>
